@@ -1,22 +1,23 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./containers/Header";
-import ProductDetails from "./containers/ProductDetails";
-import ProductListing from "./containers/ProductListing";
+import NavBar from "./components/elements/NavBar";
+import Contacts from "./components/contacts/Contacts";
+import { Provider } from "react-redux";
+import store from "./redux/Store";
+
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        {/* <ProductListing /> */}
-
-        <Switch>
-          <Route path="/" component={ProductListing} />
-          <Route path="/product/productId" component={ProductDetails} />
-          <Route>404 Not Found!</Route>
-        </Switch>
-      </Router>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <NavBar />
+        <div className="container">
+          <div className="py-3">
+            {" "}
+            <Contacts />
+          </div>
+        </div>
+      </div>
+    </Provider>
   );
 }
 
