@@ -1,9 +1,20 @@
 .main {
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 .action {
   opacity: 0;
 }
 tr:hover .action {
   opacity: 1;
+}
+
+td a {
+  color: black;
+}
+
+td a:hover {
+  color: chartreuse;
+}
+.card-body {
+  line-height: 10px;
 }

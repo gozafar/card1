@@ -1,3 +1,4 @@
+import { CREATE_CONTACT } from "../Action/Constant";
 const initialState = {
   contacts: [
     {
@@ -235,6 +236,10 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case CREATE_CONTACT:
+      return {
+        contacts: [action.payload, ...state.contacts],
+      };
     default:
       return state;
   }

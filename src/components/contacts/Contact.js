@@ -28,7 +28,7 @@ const Contact = ({ contact }) => {
           <span className="material-icons ">edit</span>
         </a>
         <a href="">
-          <span className="material-icons">remove_circle</span>
+          <span className="material-icons text-danger">remove_circle</span>
         </a>
       </td>
     </tr>
